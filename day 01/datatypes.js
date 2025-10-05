@@ -5,4 +5,4 @@ const temp = 35.5;
 const undefined2 = undefined;
 const emptValue = null;
 
-console.log(typeof myName, typeof emptyValue, typeof temperature, typeof undefined1)
+console.log(typeof myName, typeof emptValue, typeof temperature, typeof undefined2)
