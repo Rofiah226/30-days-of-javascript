@@ -23,10 +23,9 @@ console.log(
 console.log(typeof "10" == typeof 10);
 
 // 3
-let stringTen = "10";
-let floatNine = 9.8;
-let float = parseInt(9.8);
-console.log(float == stringTen);
+const stringTen = "10";
+const floatNine = 9.8;
+console.log(floatNine == stringTen);
 
 // 4
 const numOne = 3 * 4;
@@ -123,87 +122,87 @@ console.log(calendar.getTime());
 //Level 2
 
 //1
-// constant = window.prompt("Enter the area of triangle");
-// let base = prompt("Enter base:");
-// let height = prompt("Enter height:");
-// let area = 0.5 * base * height;
 
-// // window.alert(`The area of the triangle is ${area}`)
-// console.log(`The area of the triangle is ${area}`);
+const base = prompt("Enter base:");
+const height = prompt("Enter height:");
+const area = 0.5 * base * height;
 
-// // 220
-// let sideA = prompt("Enter side a:");
-// let sideB = prompt("Enter side b:");
-// let sideC = prompt("Enter side c:");
+// window.alert(`The area of the triangle is ${area}`)
+console.log(`The area of the triangle is ${area}`);
 
-// sideA = parseInt(sideA);
-// sideB = parseInt(sideB);
-// sideC = parseInt(sideC);
-// let perimeter = sideA + sideB + sideC;
+// 2
+let sideA = prompt("Enter side a:");
+let sideB = prompt("Enter side b:");
+let sideC = prompt("Enter side c:");
 
-// console.log(`The perimeter of a triangle is ${perimeter}`);
+sideA = parseInt(sideA);
+sideB = parseInt(sideB);
+sideC = parseInt(sideC);
+let perimeter = sideA + sideB + sideC;
 
-// // 3
-// let length = prompt("Enter length");
-// let width = prompt("Enter width");
-// let area1 = length * width;
-// let perimeterOfRec = 2 * area1;
+console.log(`The perimeter of a triangle is ${perimeter}`);
 
-// // window.alert(`The area of a rectangle is ${area1}`);
-// // window.alert(`The perimeter of a rectangle is ${perimeterOfRec}`);
-// console.log(`The area of a rectangle is ${area1}`);
-// console.log(`The area of a rectangle is ${perimeterOfRec}`);
+// 3
+const length = prompt("Enter length");
+const width = prompt("Enter width");
+const area1 = length * width;
+const perimeterOfRec = 2 * area1;
 
-// // 4
-// const PI = 3.14;
-// let radius = prompt("Enter radius:");
-// let areaOfCircle = PI * radius * radius;
-// let circumference = Math.floor(2 * PI * radius);
+// window.alert(`The area of a rectangle is ${area1}`);
+// window.alert(`The perimeter of a rectangle is ${perimeterOfRec}`);
+console.log(`The area of a rectangle is ${area1}`);
+console.log(`The area of a rectangle is ${perimeterOfRec}`);
 
-// console.log(`The area of a circle is ${areaOfCircle}`);
-// console.log(`The circumference of a circle is ${circumference}`);
+// 4
+const PI = 3.14;
+let radius = prompt("Enter radius:");
+let areaOfCircle = PI * radius * radius;
+let circumference = Math.floor(2 * PI * radius);
 
-// //5
-// // const slope1 = calculateSlope(1, 2, 3, 4); // Points (1,2) and (3,4)
-// // console.log("Slope 1:", slope1); // Output: Slope 1: 1
+console.log(`The area of a circle is ${areaOfCircle}`);
+console.log(`The circumference of a circle is ${circumference}`);
 
-// // 6
+//5
+// const slope1 = calculateSlope(1, 2, 3, 4); // Points (1,2) and (3,4)
+// console.log("Slope 1:", slope1); // Output: Slope 1: 1
 
-// // 7
+// 6
 
-// // 8
+// 7
 
-// // 9
-// let hours = prompt("Enter number of hours:") ;
-// let rate = prompt("Enter rate per hour:");
-// let earning = rate * hours;
+// 8
 
-// console.log(`Your weekly earning is ${earning}`);
+// 9
+const hours = prompt("Enter number of hours:") ;
+const rate = prompt("Enter rate per hour:");
+const earning = rate * hours;
 
-// // 10
-// const name2 = "Akintunde";
-// if (name2.length > 7) console.log(`Your name is long`);
-// else console.log(`Your name is short`);
+console.log(`Your weekly earning is ${earning}`);
 
-// // 11
-// const firstName1 = "Rofiah";
-// const familyName = "Akintunde";
-// if (firstName.length > familyName)
-//   console.log(
-//     `Your first name, ${firstName1} is longer than your name, ${familyName}`
-//   );
-// else
-//   console.log(
-//     `Your family name ${familyName} is longer than your name, ${firstName1}`
-//   );
+// 10
+const name2 = "Akintunde";
+if (name2.length > 7) console.log(`Your name is long`);
+else console.log(`Your name is short`);
 
-// // 12
-// const myAge = 29;
-// const yourAge = 21;
-// const ageDifference = myAge - yourAge;
-// console.log(`I am ${ageDifference} years older than you.`);
+// 11
+const firstName1 = "Rofiah";
+const familyName = "Akintunde";
+if (firstName.length > familyName)
+  console.log(
+    `Your first name, ${firstName1} is longer than your name, ${familyName}`
+  );
+else
+  console.log(
+    `Your family name ${familyName} is longer than your name, ${firstName1}`
+  );
 
-// // 13
+// 12
+const myAge = 29;
+const yourAge = 21;
+const ageDifference = myAge - yourAge;
+console.log(`I am ${ageDifference} years older than you.`);
+
+// 13
 let birthYear = prompt("Enter birth year:");
  let age1 = 2025 - birthYear;
  let standardAge= 18
@@ -215,8 +214,9 @@ let birthYear = prompt("Enter birth year:");
 
 
 // 14
-let numOfYears= new Date(prompt('Enter number of years you\'ve lived:')) 
-console.log(`You lived ${numOfYears.getTime()} seconds`)
+let numOfYears= (prompt('Enter number of years you\'ve lived:')) 
+let seconds = numOfYears*365*24*60*60
+console.log(`You lived ${seconds} seconds`)
 
 
 // 15
