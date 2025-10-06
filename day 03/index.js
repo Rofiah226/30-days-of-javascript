@@ -204,13 +204,13 @@ console.log(calendar.getTime());
 // console.log(`I am ${ageDifference} years older than you.`);
 
 // // 13
-// let birthYear = prompt("Enter birth year:");
-// let age1 = 2025 - birthYear;
-// let standardAge= 18
-// if (age1 >= standardAge)
-//   console.log(`You are ${age1}. You are old enough to get married.`);
-// else
-//   console.log (`You are ${age1}. You will be able to get married in ${standardAge- age1} year(s)`);
+let birthYear = prompt("Enter birth year:");
+ let age1 = 2025 - birthYear;
+ let standardAge= 18
+ if (age1 >= standardAge)
+   console.log(`You are ${age1}. You are old enough to get married.`);
+ else
+   console.log (`You are ${age1}. You will be able to get married in ${standardAge- age1} year(s)`);
 
 
 
