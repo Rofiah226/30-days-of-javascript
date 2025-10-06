@@ -160,8 +160,18 @@ console.log(shoppingCart.splice(4,1))
 
  // 1
  const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24]
- const middleAge=ages.length/2
  console.log(ages.sort())
+
+ const minAge=ages.indexOf(19)
+ console.log(minAge)
+ // min age is 19
+
+ //max age =Array-lastOfIndex
+ const maxAge=ages.lastIndexOf(26)
+ console.log(maxAge)
+
+ const middleAge=ages.length/2
  console.log(middleAge)
+
 
 
