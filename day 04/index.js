@@ -2,78 +2,78 @@
 
 // 1
 
-// const birthYear = prompt("Enter your age:");
-// const age1 = Number(birthYear);
-// const standardAge = 18;
-// if (age1 >= standardAge) {
-//   console.log(`You are ${age1}. You are old enough to drive.`);
-// } else {
-//   console.log(
-//     `You are ${age1}. You will be able to drive in ${
-//       standardAge - age1
-//     } year(s)`
-//   );
-// }
+const birthYear = prompt("Enter your age:");
+const age1 = Number(birthYear);
+const standardAge = 18;
+if (age1 >= standardAge) {
+  console.log(`You are ${age1}. You are old enough to drive.`);
+} else {
+  console.log(
+    `You are ${age1}. You will be able to drive in ${
+      standardAge - age1
+    } year(s)`
+  );
+}
 
-// // 2
-// const myAge = 19;
-// const yourAge = prompt("Enter your age");
+// 2
+const myAge = 19;
+const yourAge = prompt("Enter your age");
 
-// if (yourAge > myAge) {
-//   console.log(`You are ${yourAge - myAge} years older than me.`);
-// } else {
-//   console.log(`I am ${myAge - yourAge} years older than you.`);
-// }
+if (yourAge > myAge) {
+  console.log(`You are ${yourAge - myAge} years older than me.`);
+} else {
+  console.log(`I am ${myAge - yourAge} years older than you.`);
+}
 
-// // 3
-// const a = 6;
-// const b = 5;
+// 3
+const a = 6;
+const b = 5;
 
-// if (a > b) {
-//   console.log(`${a} is greater than ${b}`);
-// } else {
-//   console.log(`${a} is less than ${b}`);
-// }
+if (a > b) {
+  console.log(`${a} is greater than ${b}`);
+} else {
+  console.log(`${a} is less than ${b}`);
+}
 
 
-//  true ? console.log(`${a} is greater than ${b}`)
-//   : console.log(`${a} is less than ${b}`);
+ true ? console.log(`${a} is greater than ${b}`)
+  : console.log(`${a} is less than ${b}`);
 
 
 // // 4
-// const num1 = prompt("Enter a number:");
-// const num2 = num1 % 2;
+const num1 = prompt("Enter a number:");
+const num2 = num1 % 2;
 
-// if (num2 == 0) {
-//   console.log(`${num1} is an even number`);
-// } else {
-//   console.log(`${num1} is an odd number`);
-// }
+if (num2 == 0) {
+  console.log(`${num1} is an even number`);
+} else {
+  console.log(`${num1} is an odd number`);
+}
 
-// //Level 2
+ //Level 2
 
-// // 1
+ // 1
 
-// const grade = prompt("Enter your grade score:");
-// switch (true) {
-//   case grade >= 80:
-//     console.log(`Grade A`);
-//     break;
-//   case grade >= 70:
-//     console.log(`Grade B`);
-//     break;
-//   case grade >= 60:
-//     console.log(`Grade C`);
-//     break;
-//   case grade >= 50:
-//     console.log(`Grade D`);
-//     break;
-//   case grade <= 49:
-//     console.log(`Grade F`);
-//     break;
-//   default:
-//     console.log(`You passed!`);
-// }
+const grade = prompt("Enter your grade score:");
+switch (true) {
+  case grade >= 80:
+    console.log(`Grade A`);
+    break;
+  case grade >= 70:
+    console.log(`Grade B`);
+    break;
+  case grade >= 60:
+    console.log(`Grade C`);
+    break;
+  case grade >= 50:
+    console.log(`Grade D`);
+    break;
+  case grade <= 49:
+    console.log(`Grade F`);
+    break;
+  default:
+    console.log(`You passed!`);
+}
 
 // 2
 let months = prompt("Enter a month:");
