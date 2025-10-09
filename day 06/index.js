@@ -1,21 +1,21 @@
 // LOOPS
 // Exercise Level 1
 
-// // 1
-// for (let i = 0; i <= 10; i++) {
-//   console.log(i);
-// }
+for (let i = 0; i <= 10; i++) {
+  console.log(i);
+}
 
-// // 2
-// for (let i = 10; i >= 0; i--) {
-//   console.log(i);
-// }
+// 2
+for (let i = 10; i >= 0; i--) {
+  console.log(i);
+}
+// 1
 
-// let i = 10;
-// while (i >= 0) {
-//   console.log(i);
-//   i--;
-// }
+let i = 10;
+while (i >= 0) {
+  console.log(i);
+  i--;
+}
 
 let k = 10;
 do {
@@ -23,26 +23,26 @@ do {
   k--;
 } while (k >= 0);
 
-// // 3
-// for (let i = 0; i <= 30; i++) {
-//   console.log(i);
-// }
+// 3
+for (let i = 0; i <= 30; i++) {
+  console.log(i);
+}
 
-// // 4
-// let text = '#';
-// while (i<6) {
-//   console.log(text +='#')
-//   i++
-// }
+// 4
+let text = '#';
+while (i<6) {
+  console.log(text +='#')
+  i++
+}
 
-// // 5
+// 5
 
-// for (let i = 0; i <= 10; i++) {
-//   console.log(`${i} * ${i}= ${i * i}`);
-// }
+for (let i = 0; i <= 10; i++) {
+  console.log(`${i} * ${i}= ${i * i}`);
+}
 
-// // 6
-// for (let i = 0; i <= 10; i++) console.log(`${i} ${i * i} ${i * i * i}`);
+// 6
+for (let i = 0; i <= 10; i++) console.log(`${i} ${i * i} ${i * i * i}`);
 
 // 7
 for (let i = 0; i <= 100; i++) {
@@ -128,22 +128,55 @@ while (numArray.length < 5) {
 console.log(numArray);
 
 // 15
-const characters =
-  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
-let alphArray = "";
+const characters = "abcdefghijklmnopqrstuvwxyz0123456789";
+let randomString = "";
 
-for (const character of characters) {
-  console.log(character);
-  // (Math.floor(Math.random(alphabet)
-  // ))
-  // if(  (Math.floor(Math.random(alphabet.length)<5
-  // )))
-  // console.log  (Math.floor(Math.random(alphabet.length)
-  // )*5);
+for (let i = 0; i < 6; i++) {
+  const randPositon = Math.floor(Math.random() * characters.length);
+  const randomLetter = characters[randPositon];
+  randomString += randomLetter;
 }
-// console.log(alphaBets)
+console.log(randomString);
+
+
+
+
 
 // Exercise Level 2
+
+// 1
+
+for (let i = 0; i < 36; i++) {
+  const randPositon = Math.floor(Math.random() * characters.length);
+  const randomLetter = characters[randPositon];
+  randomString += randomLetter;
+}
+console.log(randomString);
+
+
+
+// 2
+const hexLetters = "abcdef0123456789";
+let randomString4 = "";
+
+for (let i = 0; i < 6; i++) {
+  const randomIndex = Math.floor(Math.random() * hexLetters.length);
+  randomLtr = hexLetters;
+  randomString4 += randomLtr[randomIndex];
+}
+console.log(`#${randomString4}`);
+
+
+// 3
+let numArray4= [];
+for (let i = 0; i < 3; i++) {
+  numArray4.push(Math.floor(Math.random() * 256)); 
+  // numArray4 += randomNum  
+}  
+console.log(`rgb(${numArray4})`)
+
+
+//4
 const countriesArray = [
   "Albania",
   "Bolivia",
@@ -164,24 +197,24 @@ for (const country of countriesArray) {
 console.log(newArr);
 
 // 5
-// const countriesArray1 = [
-//   "Albania",
-//   "Bolivia",
-//   "Canada",
-//   "Denmark",
-//   "Ethiopia",
-//   "Finland",
-//   "Germany",
-//   "Hungary",
-//   "Ireland",
-//   "Japan",
-//   "Kenya",
-// ];
-// const newArr1=[]
-// for (const country1 of countriesArray1){(
-//   newArr1.push(country1.length)
-// )}
-// console.log(newArr1)
+const countriesArray3 = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+];
+const newArr3=[]
+for (const country1 of countriesArray3){(
+  newArr3.push(country1.length)
+)}
+console.log(newArr3)
 
 // 6
 let countriesArray1 = [
@@ -219,8 +252,6 @@ const countries1 = [
 ];
 
 for (const country of countries1) {
-  // console.log(country.includes('land'));
-  // console.log(countries1.includes('land'))
   if (country.includes("land")) {
     console.log(country);
   }
@@ -269,8 +300,9 @@ for (const country of countries3) {
     longChar = country;
   }
 }
-
 console.log(longChar);
+
+
 // 10
 const countries4 = [
   "Albania",
@@ -285,17 +317,18 @@ const countries4 = [
   "Japan",
   "Kenya",
 ];
-let fiveChar = "1, 2, 5, 7, 8, ";
 
-// for(const country of countries4){
-//   if (country.length>longChar1.length){
-//     longChar1=country
-for (const country of countries4) {
-  if (country.length < fiveChar.length) {
-    fiveChar = country;
-  }
-}
-console.log(country);
+// for (const country1 of countries4) {
+//   if (country1.length > 7) {
+//     7 = country1;
+//   }
+// }
+
+// let fiveChar=['1, 2, 2, 2, 2']
+// while (i<fiveChar.length) {
+  
+// }
+// console.log(country1);
 
 // 11
 const webTechArray = [
@@ -365,23 +398,19 @@ console.log(newArr2);
 
 // }
 
+// 16
+let fullStack = [
+  ["HTML", "CSS", "JS", "React"],
+  ["Node", "Express", "MongoDB"],
+];
 
-// 15
-  let fullStack = [
-    ['HTML', 'CSS', 'JS', 'React'],
-    ['Node', 'Express', 'MongoDB']
-  ]
+let stringFullStack = fullStack.toString() + " ";
+console.log(stringFullStack.toUpperCase());
 
-  let stringFullStack= fullStack.toString() + ' '
-  console.log(stringFullStack.toUpperCase())
+// Exercise Level 3
 
-
-
-
-  // Exercise Level 3
-
-  // 1
-  // copied country array
+// 1
+// copied country array
 //   const countriesArray = [
 //   "Albania",
 //   "Bolivia",
@@ -410,231 +439,231 @@ const countriesArr = [
   "Japan",
   "Kenya",
 ];
-const sortedCountries=countriesArr.sort()
-console.log(sortedCountries)
+const sortedCountries = countriesArr.sort();
+console.log(sortedCountries);
 
 // 3
-const sortedWebtechsArray= webTechArray.sort()
-console.log(sortedWebtechsArray)
+const sortedWebtechsArray = webTechArray.sort();
+console.log(sortedWebtechsArray);
 
-const sortedMernStack= mernStack.sort()
-console.log(mernStack)
+const sortedMernStack = mernStack.sort();
+console.log(mernStack);
 
 // 4
 const countries = [
-  'Afghanistan',
-  'Albania',
-  'Algeria',
-  'Andorra',
-  'Angola',
-  'Antigua and Barbuda',
-  'Argentina',
-  'Armenia',
-  'Australia',
-  'Austria',
-  'Azerbaijan',
-  'Bahamas',
-  'Bahrain',
-  'Bangladesh',
-  'Barbados',
-  'Belarus',
-  'Belgium',
-  'Belize',
-  'Benin',
-  'Bhutan',
-  'Bolivia',
-  'Bosnia and Herzegovina',
-  'Botswana',
-  'Brazil',
-  'Brunei',
-  'Bulgaria',
-  'Burkina Faso',
-  'Burundi',
-  'Cambodia',
-  'Cameroon',
-  'Canada',
-  'Cape Verde',
-  'Central African Republic',
-  'Chad',
-  'Chile',
-  'China',
-  'Colombi',
-  'Comoros',
-  'Congo (Brazzaville)',
-  'Congo',
-  'Costa Rica',
+  "Afghanistan",
+  "Albania",
+  "Algeria",
+  "Andorra",
+  "Angola",
+  "Antigua and Barbuda",
+  "Argentina",
+  "Armenia",
+  "Australia",
+  "Austria",
+  "Azerbaijan",
+  "Bahamas",
+  "Bahrain",
+  "Bangladesh",
+  "Barbados",
+  "Belarus",
+  "Belgium",
+  "Belize",
+  "Benin",
+  "Bhutan",
+  "Bolivia",
+  "Bosnia and Herzegovina",
+  "Botswana",
+  "Brazil",
+  "Brunei",
+  "Bulgaria",
+  "Burkina Faso",
+  "Burundi",
+  "Cambodia",
+  "Cameroon",
+  "Canada",
+  "Cape Verde",
+  "Central African Republic",
+  "Chad",
+  "Chile",
+  "China",
+  "Colombi",
+  "Comoros",
+  "Congo (Brazzaville)",
+  "Congo",
+  "Costa Rica",
   "Cote d'Ivoire",
-  'Croatia',
-  'Cuba',
-  'Cyprus',
-  'Czech Republic',
-  'Denmark',
-  'Djibouti',
-  'Dominica',
-  'Dominican Republic',
-  'East Timor (Timor Timur)',
-  'Ecuador',
-  'Egypt',
-  'El Salvador',
-  'Equatorial Guinea',
-  'Eritrea',
-  'Estonia',
-  'Ethiopia',
-  'Fiji',
-  'Finland',
-  'France',
-  'Gabon',
-  'Gambia, The',
-  'Georgia',
-  'Germany',
-  'Ghana',
-  'Greece',
-  'Grenada',
-  'Guatemala',
-  'Guinea',
-  'Guinea-Bissau',
-  'Guyana',
-  'Haiti',
-  'Honduras',
-  'Hungary',
-  'Iceland',
-  'India',
-  'Indonesia',
-  'Iran',
-  'Iraq',
-  'Ireland',
-  'Israel',
-  'Italy',
-  'Jamaica',
-  'Japan',
-  'Jordan',
-  'Kazakhstan',
-  'Kenya',
-  'Kiribati',
-  'Korea, North',
-  'Korea, South',
-  'Kuwait',
-  'Kyrgyzstan',
-  'Laos',
-  'Latvia',
-  'Lebanon',
-  'Lesotho',
-  'Liberia',
-  'Libya',
-  'Liechtenstein',
-  'Lithuania',
-  'Luxembourg',
-  'Macedonia',
-  'Madagascar',
-  'Malawi',
-  'Malaysia',
-  'Maldives',
-  'Mali',
-  'Malta',
-  'Marshall Islands',
-  'Mauritania',
-  'Mauritius',
-  'Mexico',
-  'Micronesia',
-  'Moldova',
-  'Monaco',
-  'Mongolia',
-  'Morocco',
-  'Mozambique',
-  'Myanmar',
-  'Namibia',
-  'Nauru',
-  'Nepal',
-  'Netherlands',
-  'New Zealand',
-  'Nicaragua',
-  'Niger',
-  'Nigeria',
-  'Norway',
-  'Oman',
-  'Pakistan',
-  'Palau',
-  'Panama',
-  'Papua New Guinea',
-  'Paraguay',
-  'Peru',
-  'Philippines',
-  'Poland',
-  'Portugal',
-  'Qatar',
-  'Romania',
-  'Russia',
-  'Rwanda',
-  'Saint Kitts and Nevis',
-  'Saint Lucia',
-  'Saint Vincent',
-  'Samoa',
-  'San Marino',
-  'Sao Tome and Principe',
-  'Saudi Arabia',
-  'Senegal',
-  'Serbia and Montenegro',
-  'Seychelles',
-  'Sierra Leone',
-  'Singapore',
-  'Slovakia',
-  'Slovenia',
-  'Solomon Islands',
-  'Somalia',
-  'South Africa',
-  'Spain',
-  'Sri Lanka',
-  'Sudan',
-  'Suriname',
-  'Swaziland',
-  'Sweden',
-  'Switzerland',
-  'Syria',
-  'Taiwan',
-  'Tajikistan',
-  'Tanzania',
-  'Thailand',
-  'Togo',
-  'Tonga',
-  'Trinidad and Tobago',
-  'Tunisia',
-  'Turkey',
-  'Turkmenistan',
-  'Tuvalu',
-  'Uganda',
-  'Ukraine',
-  'United Arab Emirates',
-  'United Kingdom',
-  'United States',
-  'Uruguay',
-  'Uzbekistan',
-  'Vanuatu',
-  'Vatican City',
-  'Venezuela',
-  'Vietnam',
-  'Yemen',
-  'Zambia',
-  'Zimbabwe'
-]
-let longestWord1=''
+  "Croatia",
+  "Cuba",
+  "Cyprus",
+  "Czech Republic",
+  "Denmark",
+  "Djibouti",
+  "Dominica",
+  "Dominican Republic",
+  "East Timor (Timor Timur)",
+  "Ecuador",
+  "Egypt",
+  "El Salvador",
+  "Equatorial Guinea",
+  "Eritrea",
+  "Estonia",
+  "Ethiopia",
+  "Fiji",
+  "Finland",
+  "France",
+  "Gabon",
+  "Gambia, The",
+  "Georgia",
+  "Germany",
+  "Ghana",
+  "Greece",
+  "Grenada",
+  "Guatemala",
+  "Guinea",
+  "Guinea-Bissau",
+  "Guyana",
+  "Haiti",
+  "Honduras",
+  "Hungary",
+  "Iceland",
+  "India",
+  "Indonesia",
+  "Iran",
+  "Iraq",
+  "Ireland",
+  "Israel",
+  "Italy",
+  "Jamaica",
+  "Japan",
+  "Jordan",
+  "Kazakhstan",
+  "Kenya",
+  "Kiribati",
+  "Korea, North",
+  "Korea, South",
+  "Kuwait",
+  "Kyrgyzstan",
+  "Laos",
+  "Latvia",
+  "Lebanon",
+  "Lesotho",
+  "Liberia",
+  "Libya",
+  "Liechtenstein",
+  "Lithuania",
+  "Luxembourg",
+  "Macedonia",
+  "Madagascar",
+  "Malawi",
+  "Malaysia",
+  "Maldives",
+  "Mali",
+  "Malta",
+  "Marshall Islands",
+  "Mauritania",
+  "Mauritius",
+  "Mexico",
+  "Micronesia",
+  "Moldova",
+  "Monaco",
+  "Mongolia",
+  "Morocco",
+  "Mozambique",
+  "Myanmar",
+  "Namibia",
+  "Nauru",
+  "Nepal",
+  "Netherlands",
+  "New Zealand",
+  "Nicaragua",
+  "Niger",
+  "Nigeria",
+  "Norway",
+  "Oman",
+  "Pakistan",
+  "Palau",
+  "Panama",
+  "Papua New Guinea",
+  "Paraguay",
+  "Peru",
+  "Philippines",
+  "Poland",
+  "Portugal",
+  "Qatar",
+  "Romania",
+  "Russia",
+  "Rwanda",
+  "Saint Kitts and Nevis",
+  "Saint Lucia",
+  "Saint Vincent",
+  "Samoa",
+  "San Marino",
+  "Sao Tome and Principe",
+  "Saudi Arabia",
+  "Senegal",
+  "Serbia and Montenegro",
+  "Seychelles",
+  "Sierra Leone",
+  "Singapore",
+  "Slovakia",
+  "Slovenia",
+  "Solomon Islands",
+  "Somalia",
+  "South Africa",
+  "Spain",
+  "Sri Lanka",
+  "Sudan",
+  "Suriname",
+  "Swaziland",
+  "Sweden",
+  "Switzerland",
+  "Syria",
+  "Taiwan",
+  "Tajikistan",
+  "Tanzania",
+  "Thailand",
+  "Togo",
+  "Tonga",
+  "Trinidad and Tobago",
+  "Tunisia",
+  "Turkey",
+  "Turkmenistan",
+  "Tuvalu",
+  "Uganda",
+  "Ukraine",
+  "United Arab Emirates",
+  "United Kingdom",
+  "United States",
+  "Uruguay",
+  "Uzbekistan",
+  "Vanuatu",
+  "Vatican City",
+  "Venezuela",
+  "Vietnam",
+  "Yemen",
+  "Zambia",
+  "Zimbabwe",
+];
+let longestWord1 = "";
 for (const country of countries) {
-  if(country.includes('land')){
-    console.log((country))
+  if (country.includes("land")) {
+    console.log(country);
   }
 }
 
 // 5
-for(const country of countries){
-  if(country.length>longestWord1.length){
-    longestWord1 = country
+for (const country of countries) {
+  if (country.length > longestWord1.length) {
+    longestWord1 = country;
   }
 }
-console.log(longestWord1)
+console.log(longestWord1);
 
 // 6
 for (const country of countries) {
-  if(country.includes('land')){
-    console.log((country))
+  if (country.includes("land")) {
+    console.log(country);
   }
 }
 
@@ -642,9 +671,9 @@ for (const country of countries) {
 //8
 //9
 
-for(const country of countries){
-  if (countries.reverse){
+for (const country of countries) {
+  if (countries.reverse) {
   }
-  console.log(country.toUpperCase())
+  console.log(country.toUpperCase());
 }
-console.log(countries)
+console.log(countries);
