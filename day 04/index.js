@@ -77,12 +77,12 @@ switch (true) {
 
 // 2
 let months = prompt("Enter a month:");
-let autumn = "September"| "October"| "November";
+let autumn = ["September", "October", "November"];
 let winter = "December"|"January"|"February";
 let spring = "March"|"April"|"May";
 let summer = "June"|"July"|"August";
 
-switch (months) {
+switch (autumn.includes("September", "October", "November")) {
   case autumn:
     window.alert('Autumn');
     break;
