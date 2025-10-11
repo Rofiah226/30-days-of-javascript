@@ -41,23 +41,24 @@ const statesInNaija =[
 const numbers = "0123456789";
 let randomString1 = [];
 let randomNumbers = "";
+// console.log(statesInNaija.length)
 for (let i = 0; i < 4; i++) {
-  const randomLtrPosition = Math.floor(Math.random() * statesInNaija.length);
-  const randState = statesInNaija[randomLtrPosition].toUpperCase().slice(0,3);
-  console.log(randState)
+  const randomStatePosition = Math.floor(Math.random() * statesInNaija.length);
+  const randStateThreeLtr = statesInNaija[randomStatePosition].toUpperCase().slice(0,3);
+  console.log(randStateThreeLtr)
 
-  const randomNumPosition = Math.floor(Math.random() * numbers.length);
-  const randNumber = numbers[randomNumPosition];
-console.log(randNumber)
-  randomNumbers += randNumber;
+//   const randomNumPosition = Math.floor(Math.random() * numbers.length);
+//   const randNumber = numbers[randomNumPosition];
+// console.log(randNumber)
+//   randomNumbers += randNumber;
      
-  if (randomString1.length < 3) {
-      randomString1 += randState;
+//   if (randomString1.length < 3) {
+//       randomString1 += randStateThreeLtr;
+// }
 }
-}
-console.log(randomString1)    
-console.log(randomNumbers)
-console.log (`${randomString1}-${randomNumbers}`)
+// console.log(randomString1)    
+// console.log(randomNumbers)
+// console.log (`${randomString1}-${randomNumbers}`)
 
 
 
