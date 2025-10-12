@@ -12,7 +12,11 @@ const dog = {
   names: "Rob",
   legs: 4,
   color: "gold",
+  barking: "woof woof",
   age: "Three months old",
+  barkProperty: function () {
+    return `${this.barking}`;
+  },
 };
 
 // 4
@@ -20,21 +24,309 @@ console.log(dog["names"]);
 console.log(dog.legs);
 console.log(dog.color);
 console.log(dog.age);
+console.log(dog.barkProperty());
+
+// Exercise Level 2
+// 1
+const users = {
+  Alex: {
+    email: "alex@alex.com",
+    skills: ["HTML", "CSS", "JavaScript"],
+    age: 20,
+    isLoggedIn: false,
+    points: 30,
+  },
+  Asab: {
+    email: "asab@asab.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Redux",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 25,
+    isLoggedIn: false,
+    points: 50,
+  },
+  Brook: {
+    email: "daniel@daniel.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
+    age: 30,
+    isLoggedIn: true,
+    points: 50,
+  },
+  Daniel: {
+    email: "daniel@alex.com",
+    skills: ["HTML", "CSS", "JavaScript", "Python"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  John: {
+    email: "john@john.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+    age: 20,
+    isLoggedIn: true,
+    points: 50,
+  },
+  Thomas: {
+    email: "thomas@thomas.com",
+    skills: ["HTML", "CSS", "JavaScript", "React"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  Paul: {
+    email: "paul@paul.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+};
+
+const allUser = Object.values(users);
+console.log(allUser);
+
+for (const user of allUser) {
+  let userSkill = user.skills;
+  console.log(userSkill);
+  // console.log(user)
+  let maxSkill = 0;
+  let userWithMostSkill = "";
+  for (const user of allUser) {
+    let count = userSkill.length;
+
+    if (count >= maxSkill) {
+      maxSkill = count;
+      userWithMostSkill = user;
+    }
+  }
+  console.log(userWithMostSkill);
+  console.log(maxSkill);
+}
+
+// 2
+for (const user of allUser) {
+  let loggedIn = user.isLoggedIn;
+  console.log(loggedIn);
+
+  let loggedInUser = 0;
+  let loggedUser = "";
+  if (loggedIn === true) {
+    loggedInUser = loggedIn;
+    loggedUser = user;
+  }
+  console.log(loggedInUser);
+  console.log(loggedUser);
+}
+
+for (const user1 of allUser) {
+  let numOfPoints = user1.points;
+  console.log(numOfPoints);
+
+  let userWithMostPoints;
+  let maxPoint = 50;
+  if (numOfPoints >= 50) {
+    numOfPoints = maxPoint;
+    userWithMostPoints = user1;
+    console.log(numOfPoints);
+    console.log(userWithMostPoints);
+  }
+}
+
+// 3
+
+for (const user2 of allUser) {
+  let userSkill1 = user2.skills;
+  let mongoUser = userSkill1.includes("MongoDB");
+  let expressUser = userSkill1.includes("Express");
+  let reactUser = userSkill1.includes("React");
+  let nodeUser = userSkill1.includes("Node.js");
+  console.log(nodeUser);
+  // let mernStack= mongoUser + expressUser + reactUser
+  // let mernStack = ''
+  if (mongoUser && expressUser && reactUser && nodeUser === true) {
+    // user2 = mernStack
+  }
+  console.log(user2);
+}
+
+// 4
+const copyUser = Object.assign({ myName: "Rofiah" }, users);
+console.log(copyUser);
+
+// 5
+const keys = Object.keys(copyUser);
+console.log(keys);
+
+// 6
+const values1 = Object.values(copyUser);
+console.log(values1);
+
+// 7
+const countries = {
+  Nigeria: {
+    countryName: "Nigeria",
+    capital: "Abuja",
+    populations: 8000000,
+    languages: "Yoruba, Igbo, Hausa, Pidgin",
+  },
+
+  Germany: {
+    countryName: "Germany",
+    capital: "Berlin",
+    populations: 83000000,
+    languages: "Danish, Frisian, Sorbian, Romani",
+  },
+
+  SouthKorea: {
+    countryName: "South Korea",
+    capital: "Seoul",
+    populations: 51000000,
+    languages: "Korea, English",
+  },
+
+  China: {
+    countryName: "China",
+    capital: "Beijing",
+    populations: 1000000000,
+    languages: "Korea, English",
+  },
+  USA: {
+    countryName: "United States Of America",
+    capital: "Washington D.C",
+    populations: 340000000,
+    languages: "English, Spanish, Chinese",
+  },
+  UK: {
+    countryName: "United Kingdom",
+    capital: "London",
+    populations: 680000000,
+    languages: "Irish, English",
+  },
+};
+
+// Exercise level 3
+const personAccount = {
+  firstName: "Rofiah",
+  lastName: "Akintunde",
+  incomes: {
+    salary: 100000,
+    freelancing: 50000,
+    business: 500000,
+  },
+  expenses: {
+    food: 300000,
+    transportation: 30000,
+    others: 100000,
+  },
+  totalIncome: function () {
+    return (
+      this.incomes.salary + this.incomes.business + this.incomes.freelancing
+    );
+  },
+  totalExpense: function () {
+    return (
+      this.expenses.food + this.expenses.transportation + this.expenses.others
+    );
+  },
+  accountInfo: function () {
+    return `${this.firstName} ${
+      this.lastName
+    }, ${this.totalIncome()} ${this.totalExpense()}`;
+  },
+  addIncome: function () {},
+  addExpense: function () {},
+  accountBalance: function () {},
+};
+console.log(personAccount.totalIncome());
+console.log(personAccount.totalExpense());
+console.log(personAccount.accountInfo());
 
 // const person = {
 //   firstName: 'Asabeneh',
+//   lastName: 'Yetayeh',
 //   age: 250,
 //   country: 'Finland',
-//   city:'Helsinki',
-//   skills: ['HTML', 'CSS', 'JS'],
-//   title: 'teacher',
-//   address: {
-//     street: 'Heitamienkatu 16',
-//     pobox: 2002,
-//     city: 'Helsinki'
-//   },
-//   getPersonInfo: function() {
-//     return `I am ${this.firstName} and I live in ${this.city}, ${this.country}. I am ${this.age}.`
+//   city: 'Helsinki',
+//   skills: [
+//     'HTML',
+//     'CSS',
+//     'JavaScript',
+//     'React',
+//     'Node',
+//     'MongoDB',
+//     'Python',
+//     'D3.js'
+//   ],
+//   getFullName: function() {
+//     return `${this.firstName} ${this.lastName}`
 //   }
 // }
-// console.log(person)
+
+// console.log(person.getFullName())
+// Asabeneh Yetayeh
+// const users = {
+//   Alex: {
+//     email: 'alex@alex.com',
+//     skills: ['HTML', 'CSS', 'JavaScript'],
+//     age: 20,
+//     isLoggedIn: false,
+//     points: 30
+//   },
+//   Asab: {
+//     email: 'asab@asab.com',
+//     skills: ['HTML', 'CSS', 'JavaScript', 'Redux', 'MongoDB', 'Express', 'React', 'Node'],
+//     age: 25,
+//     isLoggedIn: false,
+//     points: 50
+//   },
+//   Brook: {
+//     email: 'daniel@daniel.com',
+//     skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux'],
+//     age: 30,
+//     isLoggedIn: true,
+//     points: 50
+//   },
+//   Daniel: {
+//     email: 'daniel@alex.com',
+//     skills: ['HTML', 'CSS', 'JavaScript', 'Python'],
+//     age: 20,
+//     isLoggedIn: false,
+//     points: 40
+//   },
+//   John: {
+//     email: 'john@john.com',
+//     skills: ['HTML', 'CSS', 'JavaScript', 'React', 'Redux', 'Node.js'],
+//     age: 20,
+//     isLoggedIn: true,
+//     points: 50
+//   },
+//   Thomas: {
+//     email: 'thomas@thomas.com',
+//     skills: ['HTML', 'CSS', 'JavaScript', 'React'],
+//     age: 20,
+//     isLoggedIn: false,
+//     points: 40
+//   },
+//   Paul: {
+//     email: 'paul@paul.com',
+//     skills: ['HTML', 'CSS', 'JavaScript', 'MongoDB', 'Express', 'React', 'Node'],
+//     age: 20,
+//     isLoggedIn: false,
+//     points: 40
+//   }
+// }```
