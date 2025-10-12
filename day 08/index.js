@@ -223,11 +223,13 @@ const countries = {
 const personAccount = {
   firstName: "Rofiah",
   lastName: "Akintunde",
-  incomes: {
-    salary: 100000,
-    freelancing: 50000,
-    business: 500000,
-  },
+  incomes: [
+    {
+      salary: 100000,
+      freelancing: 50000,
+      business: 500000,
+    },
+  ],
   expenses: {
     food: 300000,
     transportation: 30000,
@@ -248,13 +250,145 @@ const personAccount = {
       this.lastName
     }, ${this.totalIncome()} ${this.totalExpense()}`;
   },
-  addIncome: function () {},
-  addExpense: function () {},
-  accountBalance: function () {},
+  addIncome: function (desc = "allowance", amount = 2999) {
+    this.incomes.push({ desc, amount });
+
+    return;
+  },
+  addExpense: function () {
+    let addedExpense = Object.assign(this.expenses, { rent: 20000 });
+    return addedExpense;
+  },
+  accountBalance: function () {
+    return this.totalIncome() - this.totalExpense();
+  },
 };
+
+console.log(personAccount.incomes);
 console.log(personAccount.totalIncome());
 console.log(personAccount.totalExpense());
+console.log(personAccount.addIncome());
+console.log(personAccount.addExpense());
 console.log(personAccount.accountInfo());
+console.log(personAccount.accountBalance());
+
+// 2
+const users1 = [
+  {
+    _id: "ab12ex",
+    username: "Alex",
+    email: "alex@alex.com",
+    password: "123123",
+    createdAt: "08/01/2020 9:00 AM",
+    isLoggedIn: false,
+  },
+  {
+    _id: "fg12cy",
+    username: "Asab",
+    email: "asab@asab.com",
+    password: "123456",
+    createdAt: "08/01/2020 9:30 AM",
+    isLoggedIn: true,
+  },
+  {
+    _id: "zwf8md",
+    username: "Brook",
+    email: "brook@brook.com",
+    password: "123111",
+    createdAt: "08/01/2020 9:45 AM",
+    isLoggedIn: true,
+  },
+  {
+    _id: "eefamr",
+    username: "Martha",
+    email: "martha@martha.com",
+    password: "123222",
+    createdAt: "08/01/2020 9:50 AM",
+    isLoggedIn: false,
+  },
+  {
+    _id: "ghderc",
+    username: "Thomas",
+    email: "thomas@thomas.com",
+    password: "123333",
+    createdAt: "08/01/2020 10:00 AM",
+    isLoggedIn: false,
+  },
+
+  {
+    
+  },
+];
+
+const products = [
+  {
+    _id: "eedfcf",
+    name: "mobile phone",
+    description: "Huawei Honor",
+    price: 200,
+    ratings: [
+      { userId: "fg12cy", rate: 5 },
+      { userId: "zwf8md", rate: 4.5 },
+    ],
+    likes: [],
+  },
+  {
+    _id: "aegfal",
+    name: "Laptop",
+    description: "MacPro: System Darwin",
+    price: 2500,
+    ratings: [],
+    likes: ["fg12cy"],
+  },
+  {
+    _id: "hedfcg",
+    name: "TV",
+    description: "Smart TV:Procaster",
+    price: 400,
+    ratings: [{ userId: "fg12cy", rate: 5 }],
+    likes: ["fg12cy"],
+  },
+];
+
+
+const usersCollection ={
+  user:{
+  _id:'',
+  username:'',
+  email: '',
+  password:'',
+  createdAt:'',
+  isLoggedIn:'',
+  }
+}
+
+console.log(usersCollection)
+
+function signUp(newName = 'Rofiah', newEmail='brook@brook.com', newPassword) {
+  for (const user of users1) {
+    if(user.email === newEmail){
+      console.log('User already has an account')
+
+      return
+    }
+  }
+
+  
+  const newUser ={
+    _id:'erjxbx',
+    username:newName,
+    email: newEmail,
+    password:newPassword,
+    createdAt:new Date(),
+    isLoggedIn:false,
+  }
+  users1.push(newUser)
+  
+}
+console.log(users1)
+console.log(signUp())
+
+
 
 // const person = {
 //   firstName: 'Asabeneh',
