@@ -272,7 +272,7 @@ console.log(personAccount.addExpense());
 console.log(personAccount.accountInfo());
 console.log(personAccount.accountBalance());
 
-// 2
+// 2a
 const users1 = [
   {
     _id: "ab12ex",
@@ -387,6 +387,31 @@ function signUp(newName = 'Rofiah', newEmail='brook@brook.com', newPassword) {
 }
 console.log(users1)
 console.log(signUp())
+
+// 2b
+function signIn(email, password){
+  for (const user of users1) {
+    if(user.email===email && user.password === password){
+      user.isLoggedIn === true
+    console.log('Login successful')
+    }else{
+      console.log('Invalid email or password')
+    }
+    return
+  }
+
+}
+
+//3a
+// function rateProduct(productId,userId,ratings) {
+//   for (const product of products) {
+//     if(product._id=== productId ){
+//       const newRating{
+//         userId : userId
+//       }
+//     }
+//   }
+// }
 
 
 
