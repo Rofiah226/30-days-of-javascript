@@ -180,23 +180,23 @@ showDateTime(
 
 // 5
 function swapValues(a, b) {
-  let temp = a
-  a = b
-  b = temp
+  let temp = a;
+  a = b;
+  b = temp;
 
-  return `${a}, ${b}` 
+  return `${a}, ${b}`;
 }
-console.log(swapValues(3,4))
+console.log(swapValues(3, 4));
 // 6
-let reverseArrayFinal= []
-console.log(reverseArrayFinal)
+let reverseArrayFinal = [];
+console.log(reverseArrayFinal);
 function reverseArray(param = [1, 3, 3, 2]) {
-  for (let i = param.length -1; i >= 0; i--){
-    reverseArrayFinal.push(param[i])
+  for (let i = param.length - 1; i >= 0; i--) {
+    reverseArrayFinal.push(param[i]);
   }
-  console.log(reverseArrayFinal)
+  console.log(reverseArrayFinal);
 }
-reverseArray([1,2])
+reverseArray([1, 2]);
 
 // 7
 let emptyArray = [];
@@ -208,139 +208,202 @@ function capitalizedArray(array = "avocado, banana, coconut") {
 capitalizedArray();
 
 // 8
-let addedArray = ['avocado, banana']
+let addedArray = ["avocado, banana"];
 function addItem(item) {
-  let myItem = item
-  addedArray.unshift(myItem)
+  let myItem = item;
+  addedArray.unshift(myItem);
 
   // return `${addedArray}`
-  console.log(addedArray)
+  console.log(addedArray);
 }
-addItem('coconut')
+addItem("coconut");
 
 // 9
 // let removedItem = ''
-const numbers =[5, 6, 7, 8 ,9]
+const numbers = [5, 6, 7, 8, 9];
 function removeItem(index) {
-    let removed = index
-    console.log(removed.pop())
-    console.log(removed)
-    // removedItem.push(removed)
-  }
-  removeItem(numbers)
-  // console.log(removeItem())
-
-  // 10
-  const num = [1, 2, 3]
-  function sumOfNumbers(numbers) {
-    let sum = 0
-    for(let i = 0; i < numbers.length ; i++){
-         sum = sum + numbers[i]
-    }
-    console.log(sum)
-    return sum
-  }
-   console.log(sumOfNumbers(num))
-
-   // 11
-   function sumOfOdd(param) {
-    let sumOdd = 0
-    for(let i = 0; i < param; i++){
-      if(i % 2 !== 0){
-        sumOdd += i
-      }
-    }
-    console.log(sumOdd)
-   }
-  sumOfOdd(11)
-
-   // 12
-   function sumofAllEven(number) {
-     let sumEven = 0
-     for (let i = 0; i< number; i++){
-      //  sumEven += arguments[i]
-
-       if (i % 2 === 0) {
-        
-         sumEven += i
-      }
-    }
-      console.log(sumEven)
-      // return sumEven
-    }
-    sumofAllEven(10)
-
-    // 13
-    function evensAndOdds(param) {
-      // let num = param
-      for (let i = 0; i < param; i++ ){
-        if(i % 2 === 0) {
-          console.log(i)
-        }
-        if (i % 2 !== 0){
-          console.log(i)
-        }
-      }
-      return 
-    }
-    console.log(evensAndOdds(22))
-
-
-  // 14
-  const sumAllNumbers = (...myNumbers) => {
-    let theSum = 0
-    for(const number of myNumbers){
-        theSum += number
-    }
-    return theSum
-  }
-  console.log(sumAllNumbers(1,2,3))
-
-  // 15
-function randomUserIp(param1, param2, param3, param4) {
-  param1 = Math.floor(Math.random() * 256)
-  let firstParam = param1  
-  param2 = Math.floor(Math.random() * 256)
-  let secondParam = param2 
-  param3 = Math.floor(Math.random() * 256)
-  let thirdParam = param3 
-  param4 = Math.floor(Math.random() * 256)
-  let fourthParam = param4  
-
-  return `${firstParam}.${secondParam}.${thirdParam}.${fourthParam}`
-  
+  let removed = index;
+  console.log(removed.pop());
+  console.log(removed);
+  // removedItem.push(removed)
 }
-console.log(randomUserIp())
+removeItem(numbers);
+// console.log(removeItem())
+
+// 10
+const num = [1, 2, 3];
+function sumOfNumbers(numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum = sum + numbers[i];
+  }
+  console.log(sum);
+  return sum;
+}
+console.log(sumOfNumbers(num));
+
+// 11
+function sumOfOdd(param) {
+  let sumOdd = 0;
+  for (let i = 0; i < param; i++) {
+    if (i % 2 !== 0) {
+      sumOdd += i;
+    }
+  }
+  console.log(sumOdd);
+}
+sumOfOdd(11);
+
+// 12
+function sumofAllEven(number) {
+  let sumEven = 0;
+  for (let i = 0; i < number; i++) {
+    //  sumEven += arguments[i]
+
+    if (i % 2 === 0) {
+      sumEven += i;
+    }
+  }
+  console.log(sumEven);
+  // return sumEven
+}
+sumofAllEven(10);
+
+// 13
+function evensAndOdds(param) {
+  // let num = param
+  for (let i = 0; i < param; i++) {
+    if (i % 2 === 0) {
+      console.log(i);
+    }
+    if (i % 2 !== 0) {
+      console.log(i);
+    }
+  }
+  return;
+}
+console.log(evensAndOdds(22));
+
+// 14
+const sumAllNumbers = (...myNumbers) => {
+  let theSum = 0;
+  for (const number of myNumbers) {
+    theSum += number;
+  }
+  return theSum;
+};
+console.log(sumAllNumbers(1, 2, 3));
+
+// 15
+function randomUserIp(param1, param2, param3, param4) {
+  param1 = Math.floor(Math.random() * 256);
+  let firstParam = param1;
+  param2 = Math.floor(Math.random() * 256);
+  let secondParam = param2;
+  param3 = Math.floor(Math.random() * 256);
+  let thirdParam = param3;
+  param4 = Math.floor(Math.random() * 256);
+  let fourthParam = param4;
+
+  return `${firstParam}.${secondParam}.${thirdParam}.${fourthParam}`;
+}
+console.log(randomUserIp());
 
 // 16
-
-function randonMacAddress(){
-  let macAddress =[]
-  let part = ''
-
-for(let i = 1; i <= 6; i++){
-  for(let j = 1; j <= 2; j++){
-    let characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'
-    let randomIndex= Math.floor(Math.random() * characters.length - 1)
-    let randomChar = characters[randomIndex]
-    console.log(randomChar)
-     macAddress.push(randomChar)
+function randomMacAddress() {
+  let macAddress = [];
+  for (let i = 0; i < 6; i++) {
+    macAddress.push(
+      Math.floor(Math.random() * 256)
+        .toString(16)
+        .padStart(2, "0")
+    );
   }
-  if(macAddress < 6){
-    ':' + macAddress
-  }
-  console.log(macAddress)
+  return macAddress.join(":");
+}
+console.log(randomMacAddress());
 
+// 17
+let hexCharacters = "abcdef0123456789";
+let generator = "#";
+function randomHexaNumGen() {
+  for (let i = 0; i < 6; i++) {
+    let randomHexIndex = Math.floor(Math.random() * hexCharacters.length);
+    let randomHexNumber = hexCharacters[randomHexIndex];
+    generator += randomHexNumber;
+  }
+  return generator;
 }
+console.log(randomHexaNumGen());
+
+// 18
+const idCharacters =
+  "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+let emptyString = "";
+function userIdGenerator() {
+  for (let i = 0; i < 7; i++) {
+    let randomIdIndex = Math.floor(Math.random() * idCharacters.length);
+    let randomId = idCharacters[randomIdIndex];
+    console.log(randomId);
+    emptyString += randomId;
+  }
+  return emptyString;
 }
-randonMacAddress()
-// console.log(randomChars)
-// function randomMacAddress(mac1, mac2, mac3, mac4, mac5, mac6) {
-//  mac1 = Math.random() * randomChars.length
-//          mac1 = firstMac
-//  let finalFirstMac = randomChars[finalFirstMac]
-//  console.log(FinalfirstMac)
+console.log(userIdGenerator());
+
+// Exercise Level 3
+// 1
+// let tempId = "";
+// function userIdGeneratedByUser() {
+//   let numOfCharacter = prompt(
+//     "How many number characters do you want to generate:"
+//   );
+//   const numOfId = prompt("How many ids would you like:");
+//   for (let i = 0; i < idCharacters.length; i++) {
+//     let randomIndexOfId = Math.floor(Math.random() * idCharacters.length);
+//     console.log(randomIndexOfId);
+//     let randomId1 = idCharacters[randomIndexOfId];
+//     console.log(randomId1);
+//     if (tempId.length < numOfCharacter) {
+//       tempId += randomId1;
+//     }
+//     console.log(tempId);
+//   }
 // }
+// console.log(userIdGeneratedByUser());
+
+// 2
+function rgbColorGenerator() {
+  // let rgbString = 'rgb'
+  let numArray = [];
+  for (let i = 0; i < 3; i++) {
+    numArray.push(Math.floor(Math.random() * 256));
+    // rgbString += numArray
+  }
+  // console.log(`rgb(${numArray4})`)
+  return `rgb(${numArray})`;
+}
+console.log(rgbColorGenerator());
+
+// 3
+function arrayOfHexaColors(numofColors = 5) {
+  const colorsInArray = []
+// for (let j = 0; j < numofColors; j++) {
+  
+  
+  let arrayOfHexa = [];
+  
+  for (let i = 0; i < 3; i++) {
+    let randomColors = (Math.floor(Math.random() * 256).toString(16).padStart(2, '0'));
+    arrayOfHexa.push(randomColors)
+  }
+  // const fullColor = `#${arrayOfHexa.join('')}`;
+  colorsInArray.push(`#${arrayOfHexa.join('')}`)
+  return colorsInArray
+}
+// }
+console.log(arrayOfHexaColors());
+
 
 
 
@@ -358,38 +421,7 @@ randonMacAddress()
 // console.log(sumAllNums(10, 20, 13, 40, 10))  // 93
 // console.log(sumAllNums(15, 20, 30, 25, 10, 33, 40))  // 173
 
-
-
-
-
-
-
-
 // let me= ['any'].length
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 // function areaOfCircle(r) {
 //   let area = Math.PI * r;
@@ -405,4 +437,3 @@ randonMacAddress()
 //     'I am an anonymous function and my value is stored in anonymousFun'
 //   )
 // }
-
