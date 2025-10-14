@@ -12,10 +12,9 @@ const dog = {
   names: "Rob",
   legs: 4,
   color: "gold",
-  barking: "woof woof",
   age: "Three months old",
   barkProperty: function () {
-    return `${this.barking}`;
+    return 'woof woof'
   },
 };
 
@@ -25,6 +24,14 @@ console.log(dog.legs);
 console.log(dog.color);
 console.log(dog.age);
 console.log(dog.barkProperty());
+
+// 5
+dog.breed = 'German Sheperd';
+dog.getDogInfo = function (){
+return `The name of my dog is ${this.names}, he is ${age}> The color of my dog id ${color}, and it is a ${this.breed}`
+};
+
+console.log(getDogInfo())
 
 // Exercise Level 2
 // 1
