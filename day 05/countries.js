@@ -15,6 +15,8 @@ const countriesArray = [
   "Kenya",
 ];
 
+
+
 // 4
 
 const indexEthiopia = countriesArray.indexOf("Ethiopia");
