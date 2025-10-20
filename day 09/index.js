@@ -421,6 +421,7 @@ console.log(getFirstTenCountries());
 // console.log(getLastTenCountries())
 // // console.log(typeof)
 
+// Exercise Level 3
 const countries_data = [
   {
     name: "Afghanistan",
@@ -2680,35 +2681,43 @@ const countries_data = [
   },
 ];
 
-const countriesName = countries_data.map((country) => country.name);
-console.log(countriesName);
+const setOfCountry = new Set(countries_data);
 
-const countriesCapital = countries_data.map((country) => country.capital);
-console.log(countriesCapital);
-const countriesPopulation = countries_data.map((country) => country.population);
-console.log(countriesPopulation);
+console.log(setOfCountry);
 
-function mostSpokenLangs() {
-  let langCount = [];
-  let count = {};
-  for (const lang of countries_data) {
-    let mappedLang = countries_data.map((lng) => lng.languages);
-    // let filteredLang = mappedLang.filter((lng) => lng == lang)
-    console.log(mappedLang);
-    // console.log(filteredLang)
-  }
-  return langCount;
+for (const { languages } of countries_data) {
+  console.log(languages);
 }
-console.log(mostSpokenLangs());
+// const countriesName = countries_data.map((country) => country.name);
+// console.log(countriesName);
 
-function mostPopCountries(countries, count) {}
+// const countriesCapital = countries_data.map((country) => country.capital);
 
-// const counts = []
-// const count = {}
+// console.log(countriesCapital);
 
-// for (const l of langSet) {
-//   const filteredLang = languages.filter((lng) => lng === l)
-//   console.log(filteredLang) // ["English", "English", "English"]
-//   counts.push({ lang: l, count: filteredLang.length })
-// }
-// console.log(counts)
+// const countriesPopulation = countries_data.map((country) => country.population);
+
+// console.log(countriesPopulation);
+
+// function mostSpokenLangs(countries, count) {
+// let langCount = [];
+
+// let count = {};
+
+// for (const lang of countries_data) {
+
+//     let mappedLang = countries_data.map((lng) => lng.languages);
+
+//     let filteredLang = mappedLang.map((lng) => ({[lng] : lng.length}))
+
+//     console.log(mappedLang);
+
+//     mappedLang = countries
+
+//     console.log(filteredLang)
+
+//     return filteredLang
+
+//   }
+// // }
+// console.log(mostSpokenLangs());
