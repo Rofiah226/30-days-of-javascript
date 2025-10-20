@@ -226,10 +226,17 @@ const students = {
   },
 };
 
-let newStudent = Object.assign(students.skills.frontEnd, {
-  skill: "Bootstrap",
-  level: 8,
-});
-
+let newStudent = Object.assign(students, {});
 console.log(newStudent);
+let newStudent1 = Object.assign(newStudent.skills, {});
+console.log(newStudent1);
+
+// newStudent.push( {
+//   skill: "Bootstrap",
+//   level: 8,
+// })
+
+// newStudent=Object.assign(students.skills.backEnd, {})
+// newStudent.push({Skill: 'Express' , Level : 9})
+
 // Object.keys()
