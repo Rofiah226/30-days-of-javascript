@@ -2680,7 +2680,7 @@ const countries_data = [
     area: 390757,
   },
 ];
-
+console.table(countries_data)
 const setOfCountry = new Set(countries_data);
 
 console.log(setOfCountry);
