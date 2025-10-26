@@ -24,28 +24,52 @@ isValidVar('iifirst')
 // 1
 function tenMostFrequentWords(text, number) {
   const paragraph = 'I love teaching. If you do not love teaching what else can you love. I love Python if you do not love something which can give you all the capabilities to develop an application what else can you love.'
-  const cleanParagraph = paragraph.replace(/[^a-zA-Z]/g, ' ')
-  let words= cleanParagraph.split(/\s+/).filter(Boolean)
+  const words= paragraph.replace(/[^a-zA-Z]/g, ' ').split(' ')
+  // let words= cleanParagraph.split(/\s+/).filter(Boolean)
   console.log(words)
-   let wordCount = {}
-   words.forEach(word=>{
+  let wordCount = {}
+  words.forEach(word=>{
     wordCount[word]= (wordCount[word] || 0) + 1
-   })
-   let wordArray =[]
-   wordArray.forEach(key => {
-    // wordArray.push{'word' : key, 'count': wordCount[key]}
-   });
-return cleanParagraph
+  })
+  console.log(wordCount)
+  const wordArray =Object.keys(wordCount).map(key =>({
+    word : key,
+    count : wordCount[key]
+  }))
+  console.log(wordArray)
+  wordArray.sort((a,b) => b.count - a.count)
+return wordArray.slice(0, number)
     
 }  
   console.log(tenMostFrequentWords())  
 
 // Exercise Level 3
 // 1
-function cleanText(){
+function cleanText(text, number){
   const sentence = `%I $am@% a %tea@cher%, &and& I lo%#ve %tea@ching%;. There $is nothing; &as& mo@re rewarding as educa@ting &and& @emp%o@wering peo@ple. ;I found tea@ching m%o@re interesting tha@n any other %jo@bs. %Do@es thi%s mo@tivate yo@u to be a tea@cher!?`
   const cleanSentence = sentence.replace(/[^a-zA-Z0-9\s]/g,  '')
-//   console.log(cleanSentence)
-  return cleanSentence
+  const splitSentence = cleanSentence.split(' ')
+  console.log(splitSentence)
+  let countOfWords = {}
+  for (const word of splitSentence) {
+    if(countOfWords[word]){
+      countOfWords[word] += 1
+    }else{
+      countOfWords[word] = 1
+    }
+  }
+  // splitSentence.forEach(word =>{
+  //   if(countOfWords[word]){
+  //     countOfWords += 1
+  //   }else{
+  //     countOfWords[word] = 1
+  //   }
+  // })
+  console.log(countOfWords)
+  const finalArray = []
+  for(let key in countOfWords)
+    finalArray.push({word : key , count : countOfWords[key]})
+  finalArray.sort((a, b)=> b.count - a.count)
+  return finalArray.slice(7, number)
 }
 console.log(cleanText())
