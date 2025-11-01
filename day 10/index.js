@@ -2326,18 +2326,19 @@ const countries_data = [
   },
 ];
 
-const setOfLang = new Set(countries_data);
-// console.log(setOfLang)
+
+const filterLang = countries_data.map(country => country.languages).flat()
+console.log(filterLang)
+const setOfUniqueLangs = new Set(filterLang);
+console.log(setOfUniqueLangs)
 
 const counts = [];
 const count = {};
 
-for (const lang of setOfLang) {
-  const mappedLang = countries_data.map((lang) => lang.languages);
-  console.log(mappedLang);
+for (const lang of setOfUniqueLangs) {
+  const filteredLanguages = filterLang.filter((langs) => langs === lang);
+  console.log(filteredLanguages.flat());
 
-  const filteredLang = mappedLang.map((lng) => lng === lang);
-  console.log(filteredLang.length);
-  counts.push({ lng: lang, count: filteredLang.length });
+  counts.push({ langs: lang, count: filteredLanguages.length });
 }
-console.log(counts);
+console.log(counts.sort((a,b) => b.count - a.count));

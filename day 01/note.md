@@ -1,4 +1,4 @@
-# Keys in this session
+# Keys in this session_day 01
 ## Introduction;
 - I got introduced to javascript as a programming language
 - I learnt that JavaScript is used for interactivity on a website
