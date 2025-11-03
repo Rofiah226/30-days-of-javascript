@@ -2455,20 +2455,17 @@ const countries_data = [
   },
 ];
 
-let [name, capital, languages, population, flag, region, area]= countries_data
+let [name, capital, languages, population, flag, region, area] = countries_data;
 
-console.log(name, capital, languages, population, flag, region, area)
+console.log(name, capital, languages, population, flag, region, area);
 
 // 2
 
-const student1 = ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]]
-let [name1 , skills , jsScore  ] = student1
-const flat = student1.flat()
-console.log(flat)
-console.log(name1, skills)
-
-
-
+const student1 = ["David", ["HTM", "CSS", "JS", "React"], [98, 85, 90, 95]];
+let [name1, skills, jsScore] = student1;
+const flat = student1.flat();
+console.log(flat);
+console.log(name1, skills);
 
 // 4
 const students = {
