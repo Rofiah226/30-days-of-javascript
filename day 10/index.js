@@ -2326,19 +2326,22 @@ const countries_data = [
   },
 ];
 
-
-const filterLang = countries_data.map(country => country.languages).flat()
-console.log(filterLang)
-const setOfUniqueLangs = new Set(filterLang);
-console.log(setOfUniqueLangs)
+const languages = countries_data.map((country) => country.languages);
+console.log(languages);
+const flattenedLanguages = languages.flat();
+console.log(flattenedLanguages);
+const setOfUniqueLangs = new Set(flattenedLanguages);
+console.log(setOfUniqueLangs);
 
 const counts = [];
 const count = {};
 
 for (const lang of setOfUniqueLangs) {
-  const filteredLanguages = filterLang.filter((langs) => langs === lang);
-  console.log(filteredLanguages.flat());
+  const filteredLanguages = flattenedLanguages.filter(
+    (lang2) => lang2 === lang
+  ); // ['Pashto']
+  console.log(filteredLanguages);
 
   counts.push({ langs: lang, count: filteredLanguages.length });
 }
-console.log(counts.sort((a,b) => b.count - a.count));
+console.log(counts.sort((a, b) => b.count - a.count));
