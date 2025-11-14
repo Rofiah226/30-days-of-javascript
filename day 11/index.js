@@ -1,6 +1,7 @@
 // DESTRUCTING AND SPREADING
 // Exercise Level 1
 
+
 // 1
 
 const constants = [2.72, 3.14, 9.81, 37, 100];
@@ -129,68 +130,15 @@ const users = [
 
 const checkSkills = (ski) => {
   const skills = users.map((ski) => ski.skills);
-
-  return skills;
+ const filterSkills = skills.filter(ski => ski.length < 2)
+  
+  return filterSkills ;
 };
 console.log(checkSkills());
 
-//Another Example
-const person = {
-  firstName: "Asabeneh",
-  lastName: "Yetayeh",
-  age: 250,
-  country: "Finland",
-  job: "Instructor and Developer",
-  skills: [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Redux",
-    "Node",
-    "MongoDB",
-    "Python",
-    "D3.js",
-  ],
-  languages: ["Amharic", "English", "Suomi(Finnish)"],
-};
-// Let us create a function which give information about the person object without destructuring
 
-// const getPersonInfo = obj =>{
-//   const skills = obj.skills
-//   return skills
-// }
-// console.log(getPersonInfo())
 
-const person1 = {
-  firstName: "Asabeneh",
-  lastName: "Yetayeh",
-  age: 250,
-  country: "Finland",
-  job: "Instructor and Developer",
-  skills: [
-    "HTML",
-    "CSS",
-    "JavaScript",
-    "React",
-    "Redux",
-    "Node",
-    "MongoDB",
-    "Python",
-    "D3.js",
-  ],
-  languages: ["Amharic", "English", "Suomi(Finnish)"],
-};
-// Let us create a function which give information about the person object without destructuring
 
-const getPersonInfo1 = (obj) => {
-  const skills = obj.skills;
-  const formattedSkills = skills.slice(0, -1).join(", ");
-  const languages = obj.languages;
-  const formattedLanguages = languages.slice(0, -1).join(", ");
-
-  console.log(formattedSkills);
-};
 
 // // Exercise Level 3
 
@@ -2463,10 +2411,32 @@ console.log(name, capital, languages, population, flag, region, area);
 
 const student1 = ["David", ["HTM", "CSS", "JS", "React"], [98, 85, 90, 95]];
 let [name1, skills, jsScore] = student1;
-const flat = student1.flat();
-console.log(flat);
-console.log(name1, skills);
+// const flat = student1.flat();
+// console.log(flat);
+console.log(name1, skills, jsScore );
+let [ ,,js , react] = jsScore
+console.log(js, react)
+console.log(name1,skills, jsScore)
 
+// 3
+function converArrayToObject(params) {
+   let students1 = [
+        ['David', ['HTM', 'CSS', 'JS', 'React'], [98, 85, 90, 95]],
+        ['John', ['HTM', 'CSS', 'JS', 'React'], [85, 80, 85, 80]]
+      ]
+
+      let [person1, person2] = students1
+      let [ name2, skills, scores] =person1
+      let obj = { name:name2,skills: skills,scores: scores}
+      let [ name3, skills1, scores1] =person2
+      let obj1 = { name:name3,skills: skills1,scores: scores1}
+      // console.log(person1, person2)
+      // console.log(obj)
+      students1=[obj, obj1]
+    
+  return students1
+}
+ console.log(converArrayToObject())
 // 4
 const students = {
   name: "David",
@@ -2489,15 +2459,18 @@ const students = {
 
 let newStudent = Object.assign(students, {});
 console.log(newStudent);
-let newStudent1 = Object.assign(newStudent.skills, {});
-console.log(newStudent1);
+//FRONTEND
+let newStudentFrontEnd = Object.assign(students.skills.frontEnd, {}).push({skill: 'Bootstrap', level : 8})
+// newStudentFrontEnd = newStudent
 
-// newStudent.push( {
-//   skill: "Bootstrap",
-//   level: 8,
-// })
+// BACKEND
+ let newStudentbackEnd=Object.assign(students.skills.backEnd, {}).push({skill: 'Express' , Level : 9})
+// newStudentbackEnd = newStudent
 
-// newStudent=Object.assign(students.skills.backEnd, {})
-// newStudent.push({Skill: 'Express' , Level : 9})
+// DATABASE
+let newStudentDataBase=Object.assign(students.skills.dataBase, {}).push({skill: 'SQL' , Level : 8})
+// newStudentbackEnd = newStudent
 
-// Object.keys()
+// DATASCIENCE
+let newStudentDataScience=Object.assign(students.skills.dataScience, {}).push( 'SQL')
+console.log(newStudent)
