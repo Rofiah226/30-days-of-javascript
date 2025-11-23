@@ -74,6 +74,6 @@ function cleanText(text, number) {
   for (let key in countOfWords)
     finalArray.push({ word: key, count: countOfWords[key] });
   finalArray.sort((a, b) => b.count - a.count);
-  return finalArray.slice(7, number);
+  return finalArray;
 }
 console.log(cleanText());
